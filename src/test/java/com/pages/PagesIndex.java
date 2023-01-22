@@ -54,13 +54,13 @@ public class PagesIndex {
 		public void ingresonNuevoContacto(String correo, String nombre, String mensaje) {
 			driver.findElement(ingredoNuevoContactoClic).click();
 			Helpers helper = new Helpers();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			driver.findElement(ingresoNuevoContactoCorreoInput).sendKeys(correo);
 			driver.findElement(ingresoNuevoContactoNombreInput).sendKeys(nombre);
 			driver.findElement(ingresoNuevoContactoMessageInput).sendKeys(mensaje);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			driver.findElement(ingredoNuevoContactoEnviarClic).click();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 		} // Fin metodo ingresar nuevo contacto
 		
 		
@@ -70,7 +70,7 @@ public class PagesIndex {
 		public void acercaDeNosotros() {
 			driver.findElement(acercaDeNosotrosClic).click();
 			Helpers helper = new Helpers();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 		}//Fin Metodo acerca de nosotros
 		
 		
@@ -84,7 +84,7 @@ public class PagesIndex {
 		public void ingresoLogin(String usuario, String contrasena) {
 			driver.findElement(ingresarClic).click();
 			Helpers helper = new Helpers();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			driver.findElement(userInLoginField).sendKeys(usuario);
 			driver.findElement(passInLoginField).sendKeys(contrasena);
 			driver.findElement(loginInText).click();
@@ -103,12 +103,12 @@ public class PagesIndex {
 		public void entrarRegistrarse(String usuario, String password) {
 			driver.findElement(registrarClic).click();
 			Helpers helper = new Helpers();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			driver.findElement(usernameField).sendKeys(usuario);
 			driver.findElement(paswordField).sendKeys(password);
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			driver.findElement(registerButton).click();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 	     }//Salir Metodo registrar un usuario
 	
 	
@@ -119,7 +119,7 @@ public class PagesIndex {
 			
 			driver.findElement(carritoComprasClic).click();
 			Helpers helper = new Helpers();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(8,TimeUnit.SECONDS);
 			
 		}//Fin Metodo entrar carrito de compras
 	
