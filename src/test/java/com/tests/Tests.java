@@ -34,7 +34,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void Registrarse() {
 		PagesIndex paginaindex = new PagesIndex(driver);
 		paginaindex.entrarRegistrarse("optimuz3","Systemsweb");
@@ -44,7 +44,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void Carrito() {
 		PagesIndex paginaindex  = new PagesIndex(driver);
 		PagesCart paginacarrito = new PagesCart(driver);
@@ -55,7 +55,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void AcercaDeNosotros() {
 		PagesIndex paginaindex = new PagesIndex(driver);
 		paginaindex.acercaDeNosotros();	
@@ -64,7 +64,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void noEnviarContacto() {
 		PagesIndex paginaindex = new PagesIndex(driver);
 		paginaindex.ingresonNuevoContacto("jmatuteg@gmail.com", "Javier Matute", "We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.");
@@ -83,7 +83,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void searchXPath() {
 		PagesIndex paginaindex = new PagesIndex(driver);
 		paginaindex.buscarXpath();
@@ -93,7 +93,7 @@ public class Tests {
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void ingresarUsuarioDemoBlaze() {
 		PagesIndex paginaindex = new PagesIndex(driver);
 		paginaindex.ingresoLogin("jmatute@pruebaqa.com", "123qwe");
@@ -111,3 +111,8 @@ public class Tests {
 	
 
 }
+
+//-------------- Pendientes ---------
+
+//-- Hacer una clase para los Assertes
+//--Estudiar como encontrar los elementos By

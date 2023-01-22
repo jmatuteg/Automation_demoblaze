@@ -1,5 +1,7 @@
 package com.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.helpers.Helpers;
@@ -52,13 +54,13 @@ public class PagesIndex {
 		public void ingresonNuevoContacto(String correo, String nombre, String mensaje) {
 			driver.findElement(ingredoNuevoContactoClic).click();
 			Helpers helper = new Helpers();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(ingresoNuevoContactoCorreoInput).sendKeys(correo);
 			driver.findElement(ingresoNuevoContactoNombreInput).sendKeys(nombre);
 			driver.findElement(ingresoNuevoContactoMessageInput).sendKeys(mensaje);
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(ingredoNuevoContactoEnviarClic).click();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		} // Fin metodo ingresar nuevo contacto
 		
 		
@@ -68,7 +70,7 @@ public class PagesIndex {
 		public void acercaDeNosotros() {
 			driver.findElement(acercaDeNosotrosClic).click();
 			Helpers helper = new Helpers();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		}//Fin Metodo acerca de nosotros
 		
 		
@@ -82,7 +84,7 @@ public class PagesIndex {
 		public void ingresoLogin(String usuario, String contrasena) {
 			driver.findElement(ingresarClic).click();
 			Helpers helper = new Helpers();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(userInLoginField).sendKeys(usuario);
 			driver.findElement(passInLoginField).sendKeys(contrasena);
 			driver.findElement(loginInText).click();
@@ -101,12 +103,12 @@ public class PagesIndex {
 		public void entrarRegistrarse(String usuario, String password) {
 			driver.findElement(registrarClic).click();
 			Helpers helper = new Helpers();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(usernameField).sendKeys(usuario);
 			driver.findElement(paswordField).sendKeys(password);
-			helper.sleepSeconds(2);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			driver.findElement(registerButton).click();
-			helper.sleepSeconds(1);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	     }//Salir Metodo registrar un usuario
 	
 	
@@ -117,7 +119,7 @@ public class PagesIndex {
 			
 			driver.findElement(carritoComprasClic).click();
 			Helpers helper = new Helpers();
-			helper.sleepSeconds(5);
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			
 		}//Fin Metodo entrar carrito de compras
 	
